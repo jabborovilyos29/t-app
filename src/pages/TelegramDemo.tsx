@@ -1,4 +1,4 @@
-import { getTelegramUser } from "@/shared/helpers/getTelegramUser";
+import getTelegramUser from "@/shared/helpers/getTelegramUser";
 import { useTelegram } from "@/shared/hooks/useTelegram";
 import { useEffect, useState } from "react";
 
@@ -7,7 +7,11 @@ export default function TelegramDemo() {
   const [user, setUser] = useState<any>(null);
 
   useEffect(() => {
-    setUser(getTelegramUser());
+    const getUser = async () => {
+      const user = await getTelegramUser();
+      setUser(user);
+    };
+    getUser();
   }, []);
 
   return (
