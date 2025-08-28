@@ -36,7 +36,7 @@ export async function init(options: {
   // Telegram for macOS has a ton of bugs, including cases, when the client doesn't
   // even response to the "web_app_request_theme" method. It also generates an incorrect
   // event for the "web_app_request_safe_area" method.
-  
+
   if (options.mockForMacOS) {
     let firstThemeSent = false;
     mockTelegramEnv({
