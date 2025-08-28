@@ -1,9 +1,7 @@
+import MatrixRain from "./features/MatrixRain";
+
 function App() {
-  return (
-    <div>
-      <h1>test app</h1>
-    </div>
-  );
+  return <MatrixRain />;
 }
 
 export default App;
